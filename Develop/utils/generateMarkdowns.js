@@ -44,10 +44,38 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  
+  /*Currently Using https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+  as a guide to create a Professional README.md File  */
   return `# ${data.title}
 
   ${renderLicenseBadge(data.license)}
+
+  ## Desciption 
+  ${data.description}
+
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+
+  ## Installation 
+  ${data.installation}
+
+  ## Usage
+  ${data.usage}
+
+  ## Credits 
+  ${data.credits}
+
+  ## License
+  ${data.license}
+
+  ## Tests
+  ${data.test}
+
+  ## Questions
+  
 
 `;
 }
