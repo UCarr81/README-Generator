@@ -12,6 +12,19 @@ const questions = [
         type: 'input',
         message: 'What is the title of your project?',
         name: 'title'
+    },
+    {
+        type: 'list',
+        message: 'Select a License',
+        name: 'license',
+        choices: [
+            { name: 'Apache', value: 'apache'},
+            { name: 'Boost', value: 'Boost'},
+            { name: 'MIT', value: 'MIT'},
+            { name: 'Mozilla', value: 'Mozilla'},
+            {name: 'IBM', value: 'IBM'},
+            {name: 'Unlicense', value: 'Unlicense'}
+        ]
     }
 ];
 
