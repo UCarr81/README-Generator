@@ -5,6 +5,8 @@ const generateReadme = require('./utils/generateMarkdowns')
 
 // TODO: Create an array of questions for user input
 
+
+// Questions that will be asked = Title, Description, Table of Contents, Installation, Usage, License, Contributing, Tests, Questions
 const questions = [
     {
         type: 'input',
@@ -25,7 +27,7 @@ function writeToFile(fileName, data) {
 function init() {
 
     inquirer.prompt(questions).then((response) => {
-        const readmeFile = generateReadme(response); // Use generateMarkdown here
+        const readmeFile = generateReadme(response);
         writeToFile('README.md', readmeFile);
         console.log('README.md File Generated');
     })
