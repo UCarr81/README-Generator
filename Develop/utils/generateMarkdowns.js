@@ -58,6 +58,8 @@ switch(license){
   case 'Unlicense':
     return '[http://unlicense.org/](http://unlicense.org/)';
     break;
+    default:
+      break;
 }
 }
 
@@ -84,6 +86,8 @@ function renderLicenseSection(license) {
       break;
       case 'Unlicense':
       stringLicenseSection += '## Unlicense\n' + '### The Unlicense';
+      break;
+    default:
       break;
   }
 
