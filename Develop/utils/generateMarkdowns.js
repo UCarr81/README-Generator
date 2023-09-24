@@ -42,6 +42,14 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+function githubUsername(userName){
+  if (username != ''){
+    return 'https://github.com'+userName;
+  }else{
+    return '';
+  }
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   /* Currently Using https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
@@ -99,6 +107,9 @@ ${data.license}`;
   markdown += `
 
 ## Questions
+for any question you can contact the owner via \n
+E-Mail : ${data.email}\n
+GitHub : ${githubUsername(data.userName)}
 `;
 
   return markdown;

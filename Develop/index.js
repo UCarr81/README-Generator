@@ -76,6 +76,16 @@ const questions = [
         name: 'test',
         when: (answers) => answers.includeTest,
     },
+    {
+        type: 'input',
+        message: 'Please provide an e-mail',
+        name: 'email'
+    },
+    {
+        type: 'input',
+        message: 'Please provide GitHub USERNAME',
+        name: 'userName'
+    },
 ];
 
 // TODO: Create a function to write README file
