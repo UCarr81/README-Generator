@@ -51,14 +51,30 @@ const questions = [
         name: 'usage'
     }, 
     {
+        type: 'confirm',
+        message: 'Would you like to include Credits',
+        name: 'includeCredits',
+        default: true,
+
+        
+    },
+    {
         type: 'input',
         message: 'List your collaborators if any, with links to their github \nIf you followed any tutorials links those here aswell.',
-        name: 'credits'
+        name: 'credits',
+        when: (answers) => answers.includeCredits,
+    },
+    {
+        type: 'confirm',
+        message: 'Would you like to include "Tests" in your ReadMe?',
+        name: 'includeTest',
+
     },
     {
         type: 'input',
         message: 'Provide testing instructions if any',
-        name: 'test'
+        name: 'test',
+        when: (answers) => answers.includeTest,
     },
 ];
 

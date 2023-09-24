@@ -44,46 +44,64 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  /*Currently Using https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+  /* Currently Using https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
   as a guide to create a Professional README.md File  */
   let markdown = `# ${data.title}
 
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 
-  ## Desciption 
-  ${data.description}
+## Desciption 
+${data.description}
 
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)`;
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)`;
+
+  if (data.credits) {
+    markdown += `
+- [Credits](#credits)`;
+  }
+
+  if (data.test) {
+    markdown += `
+- [Tests](#tests)`;
+  }
 
   if (data.license) {
     markdown += `
-  - [License](#license)`;
+- [License](#license)`;
   }
   markdown += `
 
-  ## Installation 
-  ${data.installation}
+## Installation 
+${data.installation}
 
-  ## Usage
-  ${data.usage}
+## Usage
+${data.usage}`;
 
-  ## Credits 
-  ${data.credits}
+  if (data.credits) {
+    markdown += `
+## Credits 
+${data.credits}`;
+  }
 
-  ## License
-  ${data.license}
+  if (data.test) {
+    markdown += `
+## Tests
+${data.test}`;
+  }
 
-  ## Tests
-  ${data.test}
+  if (data.license) {
+    markdown += `
+## License
+${data.license}`;
+  }
+  markdown += `
 
-  ## Questions
-  
-
+## Questions
 `;
-return markdown;
+
+  return markdown;
 }
 
 module.exports = generateMarkdown;
