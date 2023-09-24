@@ -13,6 +13,13 @@ const questions = [
         message: 'What is the title of your project?',
         name: 'title'
     },
+    {   
+        type: 'confirm',
+        message: 'Would you like to include a license badge?',
+        name: 'includeLicense',
+        default: true
+
+    },
     {
         type: 'list',
         message: 'Select a License',
@@ -24,7 +31,8 @@ const questions = [
             { name: 'Mozilla', value: 'Mozilla'},
             {name: 'IBM', value: 'IBM'},
             {name: 'Unlicense', value: 'Unlicense'}
-        ]
+        ],
+        when: (answers) => answers.includeLicense,
     },
     {
         type: 'input',
@@ -52,12 +60,6 @@ const questions = [
         message: 'Provide testing instructions if any',
         name: 'test'
     },
-    {
-        type: '',
-        message: '',
-        name: ''
-    }
-
 ];
 
 // TODO: Create a function to write README file

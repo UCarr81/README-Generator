@@ -46,7 +46,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   /*Currently Using https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
   as a guide to create a Professional README.md File  */
-  return `# ${data.title}
+  let markdown = `# ${data.title}
 
   ${renderLicenseBadge(data.license)}
 
@@ -56,8 +56,13 @@ function generateMarkdown(data) {
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#license)
+  - [Credits](#credits)`;
+
+  if (data.license) {
+    markdown += `
+  - [License](#license)`;
+  }
+  markdown += `
 
   ## Installation 
   ${data.installation}
@@ -78,6 +83,7 @@ function generateMarkdown(data) {
   
 
 `;
+return markdown;
 }
 
 module.exports = generateMarkdown;
