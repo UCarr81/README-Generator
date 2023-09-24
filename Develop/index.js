@@ -41,9 +41,16 @@ const questions = [
 
     },
     {
+        type: 'confirm',
+        message: 'Does your Project require Installation?',
+        name: 'includeInstallation',
+        default: true,
+    },
+    {
         type: 'input',
         message: 'What steps are requied to install your project? Provide step by step process.',
-        name: 'installation'
+        name: 'installation',
+        when: (answers) => answers.includeInstallation
     },
     {
         type: 'input',

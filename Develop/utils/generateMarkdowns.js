@@ -113,8 +113,11 @@ function generateMarkdown(data) {
 
 ${renderLicenseBadge(data.license)}
 
-## Desciption 
+## Description
 ${data.description}
+
+## Live Preview
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -134,11 +137,13 @@ ${data.description}
     markdown += `
 - [License](#license)`;
   }
-  markdown += `
 
+  if (data.installation) {
+    markdown += `
 ## Installation 
-${data.installation}
-
+${data.installation}`;
+  }
+  markdown += `
 ## Usage
 ${data.usage}`;
 
