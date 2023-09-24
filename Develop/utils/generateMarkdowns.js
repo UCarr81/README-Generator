@@ -66,7 +66,7 @@ switch(license){
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let stringLicenseSection = ''
+  let stringLicenseSection = '';
 
   switch(license){
     case 'Apache':
@@ -91,12 +91,14 @@ function renderLicenseSection(license) {
       break;
   }
 
+  return stringLicenseSection;
+
   stringLicenseSection += renderLicenseSection(license);
   return stringLicenseSection;
 }
 
 function githubUsername(userName){
-  if (username != ''){
+  if (userName != ''){
     return 'https://github.com'+userName;
   }else{
     return '';
