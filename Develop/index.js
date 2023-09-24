@@ -25,7 +25,39 @@ const questions = [
             {name: 'IBM', value: 'IBM'},
             {name: 'Unlicense', value: 'Unlicense'}
         ]
+    },
+    {
+        type: 'input',
+        message: 'Provide a short description about your project \n-What was your motivation? \n-Why did you build this project? \n-What problems does this solve? \n-What did you learn?',
+        name: 'description'
+
+    },
+    {
+        type: 'input',
+        message: 'What steps are requied to install your project? Provide step by step process.',
+        name: 'installation'
+    },
+    {
+        type: 'input',
+        message: 'Provide instructions for use',
+        name: 'usage'
+    }, 
+    {
+        type: 'input',
+        message: 'List your collaborators if any, with links to their github \nIf you followed any tutorials links those here aswell.',
+        name: 'credits'
+    },
+    {
+        type: 'input',
+        message: 'Provide testing instructions if any',
+        name: 'test'
+    },
+    {
+        type: '',
+        message: '',
+        name: ''
     }
+
 ];
 
 // TODO: Create a function to write README file
@@ -47,5 +79,4 @@ function init() {
 }
 
 // Function call to initialize app
-
 init();
