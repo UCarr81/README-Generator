@@ -22,7 +22,7 @@ const questions = [
     },
     {
         type: 'list',
-        message: 'Select a License',
+        message: 'Select a License.',
         name: 'license',
         choices: [
             { name: 'Apache', value: 'apache'},
@@ -47,12 +47,12 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Provide instructions for use',
+        message: 'Provide instructions for use.',
         name: 'usage'
     }, 
     {
         type: 'confirm',
-        message: 'Would you like to include Credits',
+        message: 'Would you like to include Credits.',
         name: 'includeCredits',
         default: true,
 
@@ -72,18 +72,18 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Provide testing instructions if any',
+        message: 'Provide testing instructions if any.',
         name: 'test',
         when: (answers) => answers.includeTest,
     },
     {
         type: 'input',
-        message: 'Please provide an e-mail',
+        message: 'Please provide an e-mail.',
         name: 'email'
     },
     {
         type: 'input',
-        message: 'Please provide GitHub USERNAME',
+        message: 'Please provide GitHub USERNAME.',
         name: 'userName'
     },
 ];
@@ -99,10 +99,14 @@ function writeToFile(fileName, data) {
 
 function init() {
 
-    inquirer.prompt(questions).then((response) => {
+    inquirer.prompt(questions)
+    .then((response) => {
         const readmeFile = generateMarkdown(response);
         writeToFile('README.md', readmeFile);
-        console.log('README.md File Generated');
+        console.log('README.md File Generated, Before publishing please revise if necesarry.');
+    })
+    .catch((err) => {
+        console.error("Uh, Oh. That wasn't suppose to happen.", err.message);
     });
 }
 
