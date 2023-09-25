@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Empower your open-source project with a professionally-crafted README.md file using this command-line utility. With seamless integration of the Inquirer package, it transforms the process of documentation, making it effortless to share your project. The README it produces contains essential project insights, including its purpose, utilization instructions, installation procedures, reporting issues, facilitating contributions, and much more.
+Empower your open-source project with README.md file using this command-line utility. With seamless integration of the Inquirer package, it transforms the process of documentation, making it effortless to share your project. The README contains essential questions. utilization instructions, installation procedures, facilitating contributions, and much more. Never have the worry of thinking "I gotta build a professional Readme now" when you can utilize this generator to give you a generated tenplated based on your preferences
 
 ## Live Preview
 ![Image of preview](./Develop/Images/livePreview.png)
