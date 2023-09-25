@@ -146,7 +146,7 @@ ${data.installation}`;
   }
   markdown += `
 ## Usage
-${data.usage}`;
+### ${data.usage}`;
 
   if (data.credits) {
     markdown += `
@@ -163,7 +163,8 @@ ${data.test}`;
   if (data.license) {
     markdown += `
 ## License 
-This project is licensed under the terms of the ${renderLicenseSection(data.license)} license
+### This project is licensed under the terms of the 
+${renderLicenseSection(data.license)}
 ${renderLicenseLink(data.license)}`;
   }
   markdown += `
@@ -173,7 +174,7 @@ If you would like to contribute to this project, please follow the guidelines ou
 
 ## Questions
 if you have question or need further assistance with this project, please feel free to contact me via: \n
-E-Mail : ${data.email}\n
+E-Mail : ${data.email}
 GitHub : ${githubUsername(data.userName)}
 `;
 

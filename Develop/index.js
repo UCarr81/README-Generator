@@ -13,13 +13,6 @@ const questions = [
         message: 'What is the title of your project?',
         name: 'title'
     },
-    {   
-        type: 'confirm',
-        message: 'Would you like to include a license badge?',
-        name: 'includeLicense',
-        default: true
-
-    },
     {
         type: 'list',
         message: 'Select a License.',
@@ -32,7 +25,6 @@ const questions = [
             {name: 'IBM', value: 'IBM'},
             {name: 'Unlicense', value: 'Unlicense'}
         ],
-        when: (answers) => answers.includeLicense,
     },
     {
         type: 'input',
