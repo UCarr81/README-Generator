@@ -6,7 +6,7 @@
 Empower your open-source project with a professionally-crafted README.md file using this command-line utility. With seamless integration of the Inquirer package, it transforms the process of documentation, making it effortless to share your project. The README it produces contains essential project insights, including its purpose, utilization instructions, installation procedures, reporting issues, facilitating contributions, and much more.
 
 ## Live Preview
-![Image of preview](./Images/livePreview.png)
+![Image of preview](./Develop/Images/livePreview.png)
 
 ## Table of Contents
 - [Installation](#installation)
