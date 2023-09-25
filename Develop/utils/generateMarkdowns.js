@@ -133,20 +133,20 @@ ${data.description}
 - [Tests](#tests)`;
   }
 
-  if (data.license) {
-    markdown += `
+  markdown += `
 - [License](#license)`;
-  }
 
   if (data.installation) { 
     markdown += `
 ## Installation
 Before using this application, you'll need to install the necessary dependencies. To do this, follow these steps: 
-${data.installation}`;
+${data.installation}
+`;
   }
+
   markdown += `
 ## Usage
-### ${data.usage}`;
+${data.usage}`;
 
   if (data.credits) {
     markdown += `
@@ -160,23 +160,19 @@ ${data.credits}`;
 ${data.test}`;
   }
 
-  if (data.license) {
-    markdown += `
+  markdown += `
 ## License 
 ### This project is licensed under the terms of the 
 ${renderLicenseSection(data.license)}
-${renderLicenseLink(data.license)}`;
-  }
-  markdown += `
+${renderLicenseLink(data.license)}
 
 ## Contributing
 If you would like to contribute to this project, please follow the guidelines outlined in the Contributing Guide.
 
 ## Questions
-if you have question or need further assistance with this project, please feel free to contact me via: \n
-E-Mail : ${data.email}
-GitHub : ${githubUsername(data.userName)}
-`;
+If you have questions or need further assistance with this project, please feel free to contact me via:
+- E-Mail: ${data.email}
+- GitHub: [${data.userName}](https://github.com/${data.userName})`;
 
   return markdown;
 }
